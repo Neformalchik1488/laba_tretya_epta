@@ -1,7 +1,7 @@
 def split_data(lines, interval, start_interval, time_sorted, data_sorted, mid_sorted_time, mid_sorted_data, orig_interval):
     while interval <= (lines[-1])[0]:
         for j in range(len(lines)):
-            if (lines[j])[0] > start_interval and round((lines[j])[0]) <= interval:
+            if (lines[j])[0] >= start_interval and round((lines[j])[0]) <= interval:
                 mid_sorted_time.append((lines[j])[0])
                 mid_sorted_data.append((lines[j])[1])
         time_sorted.append(mid_sorted_time)
